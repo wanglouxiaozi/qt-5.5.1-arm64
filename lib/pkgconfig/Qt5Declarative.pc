@@ -1,0 +1,14 @@
+prefix=/opt/qt-5.5.1-arm64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Declarative
+Description: Qt Declarative module
+Version: 5.5.1
+Libs: -L${libdir} -lQt5Declarative 
+Libs.private: -L/opt/qt-5.5.1-arm64/lib -lQt5Widgets -lQt5Gui -L/opt/qt-5.5.1-arm64/lib -lQt5Script -lQt5Sql -L/opt/qt-5.5.1-arm64/lib -lQt5XmlPatterns -lQt5Network -lQt5Core -lpthread -lrt -lQt5XmlPatterns -L/opt/qt-5.5.1-arm64/lib -lQt5Network -lQt5Core -lpthread  
+Cflags: -I${includedir}/QtDeclarative -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Script
+

@@ -1,0 +1,15 @@
+prefix=/opt/qt-5.5.1-arm64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/bin
+qt_config=minimal-config small-config medium-config large-config full-config no-pkg-config evdev linuxfb c++11 accessibility shared qpa reduce_exports clock-gettime clock-monotonic posix_fallocate mremap getaddrinfo ipv6ifname getifaddrs inotify eventfd png no-gif freetype harfbuzz zlib concurrent audio-backend release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.5.1
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lpthread -L/opt/qt-5.5.1-arm64/lib -lqtpcre -lm -ldl -lrt  
+Cflags: -I${includedir}/QtCore -I${includedir}
+

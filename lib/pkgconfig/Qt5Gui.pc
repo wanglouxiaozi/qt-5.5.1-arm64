@@ -1,0 +1,14 @@
+prefix=/opt/qt-5.5.1-arm64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Gui
+Description: Qt Gui module
+Version: 5.5.1
+Libs: -L${libdir} -lQt5Gui 
+Libs.private: -L/opt/qt-5.5.1-arm64/lib -lQt5Core -lpthread -lqtharfbuzzng  
+Cflags: -I${includedir}/QtGui -I${includedir}
+Requires: Qt5Core
+
