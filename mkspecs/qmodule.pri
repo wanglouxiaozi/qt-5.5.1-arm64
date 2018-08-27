@@ -1,5 +1,6 @@
-CONFIG +=  cross_compile compile_examples qpa largefile use_gold_linker enable_new_dtags pcre
+CONFIG +=  cross_compile compile_examples qpa largefile enable_new_dtags pcre
 QT_BUILD_PARTS +=  examples libs
+QT_SKIP_MODULES +=  qtcanvas3d
 QT_NO_DEFINES =  ALSA CUPS DBUS EGL EGLFS EGL_X11 FONTCONFIG GLIB ICONV IMAGEFORMAT_JPEG LIBPROXY NIS OPENGL OPENSSL OPENVG PULSEAUDIO SSL STYLE_GTK TSLIB XRENDER
 QT_QCONFIG_PATH = 
 host_build {

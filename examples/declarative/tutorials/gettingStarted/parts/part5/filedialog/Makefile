@@ -35,7 +35,7 @@ COMPRESS      = gzip -9f
 DISTNAME      = FileDialog1.0.0
 DISTDIR = /opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog/tmp/FileDialog1.0.0
 LINK          = aarch64-linux-gnu-g++
-LFLAGS        = -Wl,-O1 -fuse-ld=gold -Wl,--enable-new-dtags -Wl,-rpath-link,/opt/qt-everywhere-opensource-src-5.5.1/qtxmlpatterns/lib -Wl,-rpath-link,/opt/qt-everywhere-opensource-src-5.5.1/qtbase/lib -shared
+LFLAGS        = -Wl,-O1 -Wl,--enable-new-dtags -Wl,-rpath-link,/opt/qt-everywhere-opensource-src-5.5.1/qtxmlpatterns/lib -Wl,-rpath-link,/opt/qt-everywhere-opensource-src-5.5.1/qtbase/lib -shared
 LIBS          = $(SUBLIBS) -L/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/lib -lQt5Declarative -L/opt/qt-everywhere-opensource-src-5.5.1/qtbase/lib -L/opt/qt-everywhere-opensource-src-5.5.1/qtscript/lib -lQt5Sql -L/opt/qt-everywhere-opensource-src-5.5.1/qtxmlpatterns/lib -lQt5XmlPatterns -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Script -lQt5Core -lpthread 
 AR            = aarch64-linux-gnu-ar cqs
 RANLIB        = 
@@ -117,6 +117,9 @@ Makefile: filedialog.pro ../../../../../../../.qmake.conf ../../../../../../../.
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/common/g++-base.conf \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/common/g++-unix.conf \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/qconfig.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules-inst/qt_lib_serialport.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules-inst/qt_lib_serialport_private.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules/qt_lib_serialport.pri \
 		../../../../../../../mkspecs/modules-inst/qt_lib_declarative.pri \
 		../../../../../../../mkspecs/modules-inst/qt_lib_declarative_private.pri \
 		../../../../../../../mkspecs/modules/qt_lib_declarative.pri \
@@ -163,6 +166,12 @@ Makefile: filedialog.pro ../../../../../../../.qmake.conf ../../../../../../../.
 		/opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lconvert.pri \
 		/opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lrelease.pri \
 		/opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lupdate.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkit.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkit_private.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules/qt_lib_webkit.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkitwidgets.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkitwidgets_private.pri \
+		/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules-inst/qt_lib_webchannel.pri \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules-inst/qt_lib_webchannel_private.pri \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules/qt_lib_webchannel.pri \
@@ -326,6 +335,9 @@ Makefile: filedialog.pro ../../../../../../../.qmake.conf ../../../../../../../.
 /opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/common/g++-base.conf:
 /opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/common/g++-unix.conf:
 /opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/qconfig.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules-inst/qt_lib_serialport.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules-inst/qt_lib_serialport_private.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtserialport/mkspecs/modules/qt_lib_serialport.pri:
 ../../../../../../../mkspecs/modules-inst/qt_lib_declarative.pri:
 ../../../../../../../mkspecs/modules-inst/qt_lib_declarative_private.pri:
 ../../../../../../../mkspecs/modules/qt_lib_declarative.pri:
@@ -372,6 +384,12 @@ Makefile: filedialog.pro ../../../../../../../.qmake.conf ../../../../../../../.
 /opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lconvert.pri:
 /opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lrelease.pri:
 /opt/qt-everywhere-opensource-src-5.5.1/qttools/mkspecs/modules/qt_tool_lupdate.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkit.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkit_private.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules/qt_lib_webkit.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkitwidgets.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules-inst/qt_lib_webkitwidgets_private.pri:
+/opt/qt-everywhere-opensource-src-5.5.1/qtwebkit/Tools/qmake/mkspecs/modules/qt_lib_webkitwidgets.pri:
 /opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules-inst/qt_lib_webchannel.pri:
 /opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules-inst/qt_lib_webchannel_private.pri:
 /opt/qt-everywhere-opensource-src-5.5.1/qtwebchannel/mkspecs/modules/qt_lib_webchannel.pri:
@@ -740,7 +758,7 @@ tmp/moc_directory.cpp: file.h \
 		../../../../../../../include/QtDeclarative/qtdeclarativeglobal.h \
 		../../../../../../../src/declarative/qtdeclarativeglobal.h \
 		directory.h
-	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1 -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/aarch64-linux-gnu -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/backward -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include-fixed -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/libc/usr/include directory.h -o tmp/moc_directory.cpp
+	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1 -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/aarch64-linux-gnu -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/backward -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include-fixed -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/libc/usr/include directory.h -o tmp/moc_directory.cpp
 
 tmp/moc_file.cpp: /opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore/QString \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore/qstring.h \
@@ -849,7 +867,7 @@ tmp/moc_file.cpp: /opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore/
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore/qobject_impl.h \
 		/opt/qt-everywhere-opensource-src-5.5.1/qtbase/src/corelib/kernel/qobject_impl.h \
 		file.h
-	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1 -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/aarch64-linux-gnu -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/backward -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include-fixed -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/libc/usr/include file.h -o tmp/moc_file.cpp
+	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1 -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/aarch64-linux-gnu -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/backward -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include-fixed -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/libc/usr/include file.h -o tmp/moc_file.cpp
 
 tmp/moc_dialogPlugin.cpp: ../../../../../../../include/QtDeclarative/QDeclarativeExtensionPlugin \
 		../../../../../../../include/QtDeclarative/qdeclarativeextensionplugin.h \
@@ -981,7 +999,7 @@ tmp/moc_dialogPlugin.cpp: ../../../../../../../include/QtDeclarative/QDeclarativ
 		../../../../../../../include/QtDeclarative/qtdeclarativeglobal.h \
 		../../../../../../../src/declarative/qtdeclarativeglobal.h \
 		dialogPlugin.h
-	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1 -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/aarch64-linux-gnu -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include/c++/7.2.1/backward -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/lib/gcc/aarch64-linux-gnu/7.2.1/include-fixed -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/include -I/root/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu/aarch64-linux-gnu/libc/usr/include dialogPlugin.h -o tmp/moc_dialogPlugin.cpp
+	/opt/qt-everywhere-opensource-src-5.5.1/qtbase/bin/moc $(DEFINES) -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/mkspecs/linux-arm-gnueabi-g++ -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/examples/declarative/tutorials/gettingStarted/parts/part5/filedialog -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtquick1/include/QtDeclarative -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtWidgets -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtGui -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include -I/opt/qt-everywhere-opensource-src-5.5.1/qtscript/include/QtScript -I/opt/qt-everywhere-opensource-src-5.5.1/qtbase/include/QtCore -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1 -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/aarch64-linux-gnu -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include/c++/5.3.1/backward -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/lib/gcc/aarch64-linux-gnu/5.3.1/include-fixed -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/include -I/root/qtArm64Toolchain/Ambarella_Linaro_Toolchain_2016.02_For_S5/linaro-aarch64-2016.02-gcc5.3/aarch64-linux-gnu/libc/usr/include dialogPlugin.h -o tmp/moc_dialogPlugin.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
